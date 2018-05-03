@@ -1,0 +1,26 @@
+{% extends "OCCoreBundle::layout.html.twig" %}
+{% block title %}
+Page d'accueil 
+{% endblock %}
+
+{% block body %}
+<h1>La Page d'accueil</h1>
+
+<hr>
+
+{% block occore_body %}
+<p>
+Ici se tient la <b>page d'accueil !</b> </br>
+C'est une page issue du CoreBundle et qui sert à accueillir nos futurs visiteurs !</br>
+On y trouve pas grand chose dans le corps de page c'est sûr.</br>
+On remarquera qu'il n'y a que les dernières annonces affichées dans la colonne sur notre gauche :D</br></br>
+</p>
+
+ <div>
+      {% for message in app.session.flashbag.get('contactflashmessage') %}
+        <p> {{ message }}</p>
+      {% endfor %}
+    </div>
+    
+{% endblock %}
+{% endblock %} 

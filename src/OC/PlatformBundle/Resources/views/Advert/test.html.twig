@@ -1,0 +1,12 @@
+{% extends 'OCPlatformBundle::layout.html.twig' %}
+
+{% block body %}
+<h2> Page de test </h2>
+<p>
+	{% for donneeTest in donneesTest %}
+	<li>
+		{{donneeTest.title}}
+	</li>
+	{% endfor %}
+</p>
+{% endblock %}
